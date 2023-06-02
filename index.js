@@ -1,9 +1,9 @@
+require("dotenv").config();
+
 const { ApolloServer } = require("apollo-server");
 const { importSchema } = require("graphql-import");
 const EtherDataSource = require("./datasource/ethDatasource");
 const typeDefs = importSchema("./schema.graphql");
-
-require("dotenv").config();
 
 const resolvers = {
   Query: {
